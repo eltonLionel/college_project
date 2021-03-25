@@ -70,8 +70,9 @@ def update(id):
             fname = request.form['fname']
             lname = request.form['lname']
             dob = request.form['dob']
+            dob1 = datetime.strptime(dob, '%Y-%m-%d').date()
             amt = request.form['amt']
-            student = studentModel(student_id = id,fname = fname,lname = lname,dob = dob,amt =amt)
+            student = studentModel(student_id = id,fname = fname,lname = lname,dob = dob1,amt =amt)
             db.session.add(student)
             db.session.commit() 
             return redirect(f'/data/{id}')
