@@ -33,10 +33,15 @@ def create():
         db.session.commit()
         return redirect('/data')
  
-@app.route('/data')
+@app.route('/data', methods=['GET','POST'])
 def RetrieveList():
     students = studentModel.query.all()
-    return render_template('datalist.html',students = students)
+    if request.method == 'GET':
+        return render_template('datalist.html',students = students)
+    
+    if request.method == 'POST':
+        id = request.form['student_id']
+        return redirect(f'/data/{id}')
  
 @app.route('/data/<int:id>')
 def Retrievestudent(id):
