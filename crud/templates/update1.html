@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="A demo site for twitter API">
+  <meta name="author" content="Elton M">
+
+  <title>Python and Flask based Webapp</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static',    filename='css/site.css') }}" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <div class="cover-container d-flex h-100 p-3 mx-auto flex-column" alignment="justify-content-center">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">CRUD Application</h3>
+      </div>
+    </header>
+    <div id="widgetContent">
+      <main role="main" class="inner">
+        <h1 class="cover-container d-flex h-100 p-3 mx-auto flex-column">WebApp to create a SQL based CRUD application</h1>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="/">Home</a>
+          <a class="nav-link active" href="/data">Data</a>
+
+          <nav>
+    </div>
+    </main>
+  </div>
+  </div><br><br />
+
+  {% for s in students %}
+  <h3>{{s}}</h3><hr>
+  {% endfor %}
+
+  <form action='' method = "POST">
+    <p> Student ID <input type = "integer" name = "student_id" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+  </form>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+           <p>This Demo is Created by Group 4</a></p>
+    </div>
+  </footer>
+</body>
+
+</html>
