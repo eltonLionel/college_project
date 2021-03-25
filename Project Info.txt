@@ -8,5 +8,7 @@ D - Delete
 * Project is built on python flask environment'
 * FlaskSQLAlchemy and SQLite DB is used for managing databases and tables
 
+* App Link: http://eltonmonteiro.pythonanywhere.com/
+
 * Reference: https://www.askpython.com/python-modules/flask/flask-crud-application
 
