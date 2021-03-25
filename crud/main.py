@@ -48,7 +48,7 @@ def Retrievestudent(id):
     student = studentModel.query.filter_by(student_id=id).first()
     if student:
         return render_template('data.html', student = student)
-    return f"Student with id ={id} Doenst exist"
+    return f"Student with id ={id} Does not exist"
 
 @app.route('/data/update/', methods=['GET','POST'])
 def update1():
@@ -76,7 +76,7 @@ def update(id):
             db.session.add(student)
             db.session.commit() 
             return redirect(f'/data/{id}')
-        return f"Student with id = {id} Does nit exist"
+        return f"Student with id = {id} Does not exist"
  
     return render_template('update.html', student = student)
  
