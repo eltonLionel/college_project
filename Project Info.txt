@@ -1,0 +1,10 @@
+Restful API using Flassk to Perform CRUD
+
+C - Create
+R - Read
+U - Update
+D - Delete
+
+* Project is built on python flask environment'
+* FlaskSQLAlchemy and SQLite DB is used for managing databases and tables
+
